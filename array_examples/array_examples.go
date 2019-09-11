@@ -25,3 +25,11 @@ func ArrayToString(x []int) string {
 	}
 	return s
 }
+
+//PopIntArray to test Call by value or reference
+func PopIntArray(a *[]int) int {
+	var x int
+	y := len(*a)
+	x, *a = *a[y-1], *a[:y-1]
+	return x
+}

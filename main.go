@@ -1,14 +1,15 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/vlnrajesh/golang-examples/array_examples"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Hello World")
-	fmt.Println(ArrayExamples.ReverseIntArray([]int{10, 13, 14, 15, 11, 6, 4, 1, 2}))
-	fmt.Println(ArrayExamples.ArrayToString([]int{10, 13, 14, 15, 11, 6, 4, 1, 2}))
-
+	const MAX int = 3
+	a := []int{10, 11, 4}
+	var ptr *int
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+		ptr = &a[i]
+		fmt.Println(ptr)
+		fmt.Println(&a[i])
+	}
 }

@@ -15,3 +15,10 @@ func ReverseString(s string) string {
 	}
 	return string(r)
 }
+
+//SwapStrings to swap strings passed as parameters
+func SwapStrings(a *string, b *string) {
+	temp := *a
+	*a = *b
+	*b = temp
+}
